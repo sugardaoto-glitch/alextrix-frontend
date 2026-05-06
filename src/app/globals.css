@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* Pure data/prompt files — exclude from class-name scanning to avoid
+   Tailwind v4 misinterpreting template literals (e.g. `bg-[url(...)]`)
+   inside design-system prompt strings as real Tailwind classes. */
+@source not "../data/lynkid-design";
+@source not "../data/lynkid-mock-outputs.ts";
+
 @theme {
   /* Brand */
   --color-brand-50: #eef2ff;

@@ -1,4 +1,5 @@
 import type { Tool, ToolInputDef, WizardStep } from "@/lib/types/tool";
+import { LYNKID_TOOLS } from "./lynkid-tools";
 
 const TONE_OPTIONS = [
   { value: "santai_jujur", label: "Santai & jujur" },
@@ -1163,6 +1164,8 @@ export const TOOLS: Tool[] = [
     description: "Task harian yang di-generate otomatis untuk membantu Anda fokus.",
     inputs: [],
   },
+  // ========== LYNKID-IMPORTED TOOLS (23) ==========
+  ...LYNKID_TOOLS,
 ];
 
 export const TOOLS_BY_ID: Record<string, Tool> = Object.fromEntries(TOOLS.map((t) => [t.id, t]));

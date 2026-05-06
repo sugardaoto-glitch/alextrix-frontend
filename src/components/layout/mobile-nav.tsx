@@ -4,18 +4,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   LayoutGrid,
-  BookmarkCheck,
+  BookOpen,
   History,
-  Users,
+  Sparkles,
   Settings,
 } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 
 const ITEMS = [
   { href: "/dashboard", label: "Tool", icon: LayoutGrid },
-  { href: "/pustaka", label: "Pustaka", icon: BookmarkCheck },
+  { href: "/agen-ai", label: "Agen AI", icon: Sparkles },
   { href: "/riwayat", label: "Riwayat", icon: History },
-  { href: "/komunitas", label: "Komunitas", icon: Users },
+  { href: "/panduan", label: "Panduan", icon: BookOpen },
   { href: "/pengaturan", label: "Akun", icon: Settings },
 ];
 

@@ -28,12 +28,16 @@ export const ROUTES = {
   pengaturanApiKey: "/pengaturan/api-key",
   pengaturanTagihan: "/pengaturan/tagihan",
   pengaturanKomunitas: "/pengaturan/komunitas",
+  panduan: "/panduan",
+  agenAi: "/agen-ai",
 } as const;
 
 export const APP_NAV_ITEMS: NavItem[] = [
   { id: "dashboard", label: "Dashboard", href: "/dashboard", icon: "LayoutGrid" },
+  { id: "agen-ai", label: "Agen AI", href: "/agen-ai", icon: "Sparkles" },
   { id: "pustaka", label: "Pustaka", href: "/pustaka", icon: "BookmarkCheck" },
   { id: "riwayat", label: "Riwayat", href: "/riwayat", icon: "History" },
+  { id: "panduan", label: "Panduan", href: "/panduan", icon: "BookOpen" },
   { id: "komunitas", label: "Komunitas", href: "/komunitas", icon: "Users" },
 ];
 
@@ -61,6 +65,8 @@ export const PROTECTED_ROUTES = [
   "/pengaturan",
   "/aktivasi",
   "/onboarding",
+  "/panduan",
+  "/agen-ai",
 ];
 
 export const AUTH_ONLY_ROUTES = ["/masuk", "/daftar", "/lupa-password"];

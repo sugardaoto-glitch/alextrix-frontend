@@ -10,6 +10,7 @@ import {
   Settings,
   Sparkles,
   LogOut,
+  BookOpen,
 } from "lucide-react";
 import { APP_NAV_ITEMS, ROUTES } from "@/lib/constants/routes";
 import { cn } from "@/lib/utils/cn";
@@ -21,6 +22,8 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   History,
   Users,
   Settings,
+  Sparkles,
+  BookOpen,
 };
 
 export function AppSidebar() {
