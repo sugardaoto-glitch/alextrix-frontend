@@ -1,4 +1,10 @@
 import type { Tool, ToolInputDef, WizardStep } from "@/lib/types/tool";
+import { ECOMMERCE_TOOLS } from "@/data/ecommerce-tools";
+import { PROMPT_OPTIMIZER_TOOL } from "@/data/prompt-optimizer-tool";
+import { PROMPT_EXPERT_TOOL } from "@/data/prompt-expert-tool";
+import { CODE_GENERATOR_TOOL } from "@/data/code-generator-tool";
+import { COPYWRITING_TOOL } from "@/data/copywriting-tool";
+import { PDF_ASSISTANT_TOOL } from "@/data/pdf-assistant-tool";
 
 const TONE_OPTIONS = [
   { value: "santai_jujur", label: "Santai & jujur" },
@@ -32,7 +38,7 @@ const PRODUCT_TYPE_OPTIONS = [
   { value: "lainnya", label: "Lainnya" },
 ];
 
-export const TOOLS: Tool[] = [
+const BASE_TOOLS: Tool[] = [
   // ========== ACQUIRE (5) ==========
   {
     id: "niche-scanner",
@@ -1164,6 +1170,8 @@ export const TOOLS: Tool[] = [
     inputs: [],
   },
 ];
+
+export const TOOLS: Tool[] = [...BASE_TOOLS, PROMPT_OPTIMIZER_TOOL, PROMPT_EXPERT_TOOL, CODE_GENERATOR_TOOL, COPYWRITING_TOOL, PDF_ASSISTANT_TOOL, ...ECOMMERCE_TOOLS];
 
 export const TOOLS_BY_ID: Record<string, Tool> = Object.fromEntries(TOOLS.map((t) => [t.id, t]));
 

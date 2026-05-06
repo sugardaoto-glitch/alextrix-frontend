@@ -1,4 +1,5 @@
 import type { ToolOutput } from "@/lib/types/output";
+import { ECOM_MOCK_OUTPUTS } from "@/data/ecommerce-mock-outputs";
 
 const SAMPLE_LP_HTML = `<div style="font-family: system-ui, sans-serif; max-width: 600px; margin: 0 auto; padding: 0; color: #1e1b4b; line-height: 1.6;">
   <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 48px 24px; text-align: center; border-radius: 16px 16px 0 0;">
@@ -644,8 +645,242 @@ export const MOCK_OUTPUTS: Record<string, ToolOutput> = {
   "ad-intelligence": AD_INTELLIGENCE_SAMPLE,
   "campaign-studio": CAMPAIGN_STUDIO_SAMPLE,
   "action-center": ACTION_CENTER_SAMPLE,
+  "pdf-assistant": {
+    type: "markdown",
+    content: `## Ringkasan Dokumen
+
+### Ringkasan Eksekutif
+Dokumen ini membahas strategi pemasaran digital untuk UMKM di Indonesia tahun 2024, dengan fokus pada optimalisasi media sosial dan marketplace sebagai channel utama penjualan.
+
+### Poin-Poin Utama
+
+- **Pertumbuhan E-commerce:** Pasar e-commerce Indonesia diprediksi tumbuh 25% YoY, mencapai USD 82 miliar pada 2025
+- **Channel Dominan:** Shopee (35%), Tokopedia (28%), dan TikTok Shop (18%) menguasai 81% pasar
+- **Strategi Konten:** Video pendek (< 60 detik) menghasilkan engagement 3x lebih tinggi dibanding konten statis
+- **Budget Optimal:** Alokasi ideal: 40% paid ads, 30% content creation, 20% influencer, 10% tools/software
+- **Target ROI:** UMKM dengan budget Rp 5-10 juta/bulan bisa mencapai ROAS 4-6x
+
+### Rekomendasi
+1. Prioritaskan video content untuk TikTok dan Instagram Reels
+2. Manfaatkan fitur live shopping di Shopee dan TikTok
+3. Bangun database customer untuk retargeting
+4. Gunakan tools AI untuk efisiensi produksi konten
+
+### Kesimpulan
+UMKM Indonesia yang mengadopsi strategi digital terintegrasi (marketplace + social media + content marketing) berpotensi meningkatkan revenue 2-4x dalam 6-12 bulan dengan investasi yang terukur.`,
+  } as ToolOutput,
+  "copywriting-assistant": {
+    type: "markdown",
+    content: `## Judul Artikel yang Dihasilkan
+
+Berdasarkan konten tentang "tips produktivitas untuk freelancer pemula di Indonesia":
+
+1. 7 Kebiasaan Pagi yang Bikin Freelancer Pemula Makin Produktif
+2. Rahasia Produktivitas Freelancer Sukses yang Jarang Dibagikan
+3. Dari Rebahan ke Revenue: Panduan Produktivitas untuk Freelancer Indonesia
+4. Stop Prokrastinasi! Ini Cara Jitu Atur Waktu sebagai Freelancer Pemula
+5. Work Smarter, Bukan Harder: Tips Produktivitas Khusus Freelancer Lokal
+
+**Tips:** Pilih judul yang paling sesuai dengan tone konten Anda, lalu gunakan sebagai headline artikel. Judul yang baik mengandung angka, power word, dan relevansi dengan target pembaca.`,
+  } as ToolOutput,
+  "code-generator": {
+    type: "markdown",
+    content: `## Kode Generated: Landing Page Skincare
+
+\`\`\`tsx
+import { useState } from "react"
+import { Star, ShoppingCart, ChevronRight, Sparkles } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+
+export default function SkincareLP() {
+  const [activeTestimonial, setActiveTestimonial] = useState(0)
+
+  const features = [
+    { icon: <Sparkles className="w-6 h-6 text-pink-500" />, title: "Bahan Alami", desc: "100% bahan natural tanpa paraben dan SLS" },
+    { icon: <Star className="w-6 h-6 text-pink-500" />, title: "Teruji Klinis", desc: "Teruji dermatologis aman untuk kulit sensitif" },
+    { icon: <ShoppingCart className="w-6 h-6 text-pink-500" />, title: "Gratis Ongkir", desc: "Free shipping seluruh Indonesia tanpa minimum" },
+  ]
+
+  const testimonials = [
+    { name: "Rina M.", text: "Setelah 2 minggu pemakaian, kulit saya terasa lebih cerah dan lembap!", rating: 5 },
+    { name: "Dian S.", text: "Produk terbaik yang pernah saya coba. Teksturnya ringan dan cepat menyerap.", rating: 5 },
+    { name: "Fitri A.", text: "Akhirnya nemu skincare yang cocok di kulit sensitif saya!", rating: 4 },
+  ]
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-pink-50 to-rose-100 py-20 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          <div className="flex-1 space-y-6">
+            <Badge className="bg-pink-100 text-pink-700">New Release ✨</Badge>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+              Rahasia Kulit Glowing Alami
+            </h1>
+            <p className="text-lg text-gray-600">
+              Serum vitamin C premium dengan formula ringan yang cocok untuk semua jenis kulit Indonesia.
+            </p>
+            <div className="flex gap-4">
+              <Button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full">
+                Beli Sekarang <ChevronRight className="ml-2 w-4 h-4" />
+              </Button>
+              <Button variant="outline" className="rounded-full px-8 py-3">
+                Lihat Detail
+              </Button>
+            </div>
+          </div>
+          <div className="flex-1">
+            <img src="https://placehold.co/500x500/FFF0F5/FF69B4?text=Serum+VitC" alt="Botol serum vitamin C dengan latar pink soft" className="rounded-2xl shadow-xl" />
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-16 px-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8">
+          {features.map((f, i) => (
+            <Card key={i} className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="space-y-4 pt-6">
+                <div className="mx-auto w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center">{f.icon}</div>
+                <h3 className="font-semibold text-lg">{f.title}</h3>
+                <p className="text-gray-500 text-sm">{f.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-pink-50 py-16 px-6">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h2 className="text-3xl font-bold">Kata Mereka</h2>
+          <Card className="p-8">
+            <CardContent className="space-y-4">
+              <div className="flex justify-center gap-1">
+                {Array.from({ length: testimonials[activeTestimonial].rating }).map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-600 italic">"{testimonials[activeTestimonial].text}"</p>
+              <p className="font-semibold">{testimonials[activeTestimonial].name}</p>
+            </CardContent>
+          </Card>
+          <div className="flex justify-center gap-2">
+            {testimonials.map((_, i) => (
+              <button key={i} onClick={() => setActiveTestimonial(i)} className={\`w-3 h-3 rounded-full \${i === activeTestimonial ? "bg-pink-500" : "bg-pink-200"}\`} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 px-6 text-center">
+        <div className="max-w-2xl mx-auto space-y-6">
+          <h2 className="text-3xl font-bold">Mulai Perjalanan Skincare Anda</h2>
+          <p className="text-gray-500">Dapatkan diskon 20% untuk pembelian pertama</p>
+          <Button className="bg-pink-500 hover:bg-pink-600 text-white px-12 py-4 rounded-full text-lg">
+            Dapatkan Sekarang
+          </Button>
+        </div>
+      </section>
+    </div>
+  )
+}
+\`\`\`
+
+**Cara menggunakan:**
+1. Copy kode di atas ke file React/Next.js project Anda
+2. Pastikan sudah install: \`tailwindcss\`, \`lucide-react\`, \`@/components/ui/*\` (shadcn/ui)
+3. Import sebagai component atau gunakan langsung sebagai page`,
+  } as ToolOutput,
+  "prompt-expert": {
+    type: "markdown",
+    content: `## Prompt Profesional: Generator Prompt AI
+
+Berdasarkan konteks Anda (brand skincare lokal target usia 20-30 tahun), berikut prompt yang siap digunakan:
+
+\`\`\`
+Kamu adalah copywriter senior yang berpengalaman 10+ tahun di industri skincare dan beauty Indonesia.
+
+## Peran
+Kamu ahli membuat konten marketing yang engaging, authentic, dan convert untuk brand skincare lokal yang menargetkan usia 20-30 tahun.
+
+## Tugas
+Buatkan [JENIS KONTEN] untuk produk [NAMA PRODUK] dengan detail:
+- Benefit utama: [ISI BENEFIT]
+- Target: Perempuan/Laki-laki usia 20-30 tahun di Indonesia
+- Platform: [Instagram/TikTok/Twitter/Website]
+- Tone: Relatable, authentic, tidak terlalu hard-selling
+
+## Format Output
+1. Hook (1 kalimat pembuka yang bikin scroll-stopping)
+2. Body (3-5 kalimat yang menjelaskan benefit dengan storytelling)
+3. Social proof element (1 kalimat)
+4. CTA (1 kalimat ajakan yang soft tapi compelling)
+
+## Aturan
+- Gunakan bahasa yang natural seperti bicara sama teman
+- Boleh campurkan bahasa Indonesia kasual + sedikit English
+- Hindari klaim berlebihan atau tidak bisa dibuktikan
+- Sertakan emoji yang relevan (maks 3)
+- Maksimal 150 kata total
+
+## Contoh Output
+Hook: "Gilss, kulit kusam gara-gara begadang tuh real struggle banget 😭"
+Body: "Gue udah coba berbagai serum dan finally nemu yang works di kulit sensitif gue. [Nama Produk] tuh beda karena..."
+\`\`\`
+
+**Tips penggunaan:**
+- Ganti [PLACEHOLDER] dengan informasi spesifik produk Anda
+- Copy ke ChatGPT/Claude/Gemini untuk generate konten
+- Iterasi dengan menambahkan detail produk yang lebih spesifik`,
+  } as ToolOutput,
+  "prompt-optimizer": {
+    type: "markdown",
+    content: `## Prompt Teroptimasi (CO-STAR)
+
+\`\`\`
+##Konteks##
+Anda perlu membuat konten marketing untuk produk skincare baru yang ditargetkan ke perempuan usia 25-35 tahun di Indonesia. Produk ini adalah serum vitamin C dengan harga menengah-premium. Sub-tugas:
+1. Buat headline yang menarik perhatian
+2. Tulis body copy yang menjelaskan manfaat utama
+3. Sertakan social proof dan call-to-action
+4. Sesuaikan tone dengan target audiens
+
+##Tujuan##
+Meningkatkan awareness dan conversion rate produk serum vitamin C baru melalui konten marketing yang compelling dan relatable untuk target market.
+
+##Identitas##
+Sebagai senior copywriter yang berpengalaman 10 tahun di industri beauty & skincare Indonesia, dengan track record membuat kampanye viral untuk brand lokal.
+
+##Nada##
+Hangat, terpercaya, dan aspirasional — seperti kakak perempuan yang membagikan rahasia kecantikannya. Hindari bahasa yang terlalu teknis atau pushy.
+
+##Audiens##
+Perempuan Indonesia usia 25-35 tahun yang:
+- Peduli perawatan kulit tapi budget-conscious
+- Aktif di media sosial (Instagram, TikTok)
+- Sudah familiar dengan basic skincare routine
+- Mencari produk yang proven dan affordable
+
+##Hasil##
+Konten marketing dalam format:
+- 1 headline utama (max 10 kata)
+- 1 sub-headline (max 20 kata)
+- Body copy 150-200 kata
+- 3 bullet point manfaat utama
+- 1 CTA yang kuat
+- 3 variasi caption Instagram (masing-masing max 100 kata)
+
+Silakan berpikir langkah demi langkah, lalu selesaikan tugas.
+\`\`\`
+
+**Tips penggunaan:** Copy prompt di atas dan paste ke ChatGPT, Claude, atau AI assistant lainnya untuk mendapatkan hasil yang optimal.`,
+  } as ToolOutput,
 };
 
 export function getMockOutput(toolId: string): ToolOutput {
-  return MOCK_OUTPUTS[toolId] ?? GENERIC_TIPS;
+  return MOCK_OUTPUTS[toolId] ?? ECOM_MOCK_OUTPUTS[toolId] ?? GENERIC_TIPS;
 }

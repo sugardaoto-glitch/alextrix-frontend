@@ -1,0 +1,58 @@
+import type { Tool } from "@/lib/types/tool";
+
+const TEMPLATE_CATEGORY_OPTIONS = [
+  { value: "structured-output", label: "Output Terstruktur — Konversi konten ke format JSON" },
+  { value: "code-rewrite", label: "Penulisan Ulang Kode — Perbaiki dan optimasi kode" },
+  { value: "code-explanation", label: "Penjelasan Kode — Jelaskan logika kode secara detail" },
+  { value: "promotional-slogan", label: "Slogan Promosi — Buat slogan kreatif untuk produk" },
+  { value: "content-outline", label: "Outline Konten — Buat kerangka artikel/konten" },
+  { value: "content-classification", label: "Klasifikasi Konten — Kategorisasi teks otomatis" },
+  { value: "role-play", label: "Role Play — Buat karakter AI custom" },
+  { value: "prompt-generation", label: "Generator Prompt — Buat prompt AI berkualitas" },
+  { value: "story-creation", label: "Asisten Cerita — Bantu buat cerita menarik" },
+  { value: "excel-formula", label: "Ahli Excel — Buat formula Excel dari deskripsi" },
+  { value: "article-polisher", label: "Pemoles Artikel — Perbaiki kualitas tulisan" },
+  { value: "interview-question", label: "Generator Pertanyaan Interview — Buat pertanyaan wawancara" },
+  { value: "email-extractor", label: "Ekstrak Email — Ambil alamat email dari teks" },
+  { value: "data-organizer", label: "Pengatur Data — Ubah teks menjadi tabel/JSON" },
+  { value: "rating-expert", label: "Ahli Rating — Evaluasi dan beri skor kualitas teks" },
+  { value: "adaptive-editor", label: "Editor Adaptif — Tulis ulang teks sesuai gaya tertentu" },
+  { value: "product-tweet", label: "Tweet Produk — Buat tweet promosi produk" },
+  { value: "dream-interpretation", label: "Penafsir Mimpi — Interpretasi dan simbolisme mimpi" },
+  { value: "philosophical-thinking", label: "Pemikiran Filosofis — Diskusi filosofis mendalam" },
+  { value: "fun-qa", label: "Generator Kuis — Buat pertanyaan trivia menarik" },
+  { value: "image-caption", label: "Caption Gambar — Buat deskripsi profesional untuk gambar AI" },
+];
+
+export const PROMPT_EXPERT_TOOL: Tool = {
+  id: "prompt-expert",
+  name: "Prompt Expert",
+  tagline: "Template prompt profesional siap pakai untuk berbagai kebutuhan",
+  icon: "🎯",
+  pillar: "optimize",
+  isActive: true,
+  uiVariant: "simple",
+  outputType: "markdown",
+  estimatedTokens: { input: 500, output: 2000 },
+  estimatedDurationSeconds: 15,
+  inputs: [
+    {
+      id: "template",
+      label: "Pilih template",
+      type: "select",
+      required: true,
+      options: TEMPLATE_CATEGORY_OPTIONS,
+      defaultValue: "prompt-generation",
+      helpText: "Pilih jenis prompt template yang ingin digunakan.",
+    },
+    {
+      id: "context",
+      label: "Konteks / informasi tambahan",
+      type: "textarea",
+      placeholder: "Berikan detail spesifik untuk template ini...\n\nContoh: Saya ingin membuat konten untuk brand skincare lokal target usia 20-30 tahun",
+      required: true,
+      validation: { minLength: 10, maxLength: 3000 },
+      helpText: "Tambahkan konteks spesifik agar prompt yang dihasilkan lebih relevan.",
+    },
+  ],
+};

@@ -1,4 +1,4 @@
-export type Pillar = "acquire" | "convert" | "retain" | "optimize";
+export type Pillar = "acquire" | "convert" | "retain" | "optimize" | "ecommerce";
 
 export type UiVariant =
   | "simple"

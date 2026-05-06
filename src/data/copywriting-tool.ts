@@ -1,0 +1,116 @@
+import type { Tool } from "@/lib/types/tool";
+
+const TASK_OPTIONS = [
+  // Konten Kreatif
+  { value: "grammar-check", label: "Cek Tata Bahasa — Periksa grammar dan beri saran perbaikan" },
+  { value: "article-title", label: "Generator Judul Artikel — Buat judul berkualitas" },
+  { value: "book-title", label: "Generator Judul Buku — Buat judul buku menarik" },
+  { value: "sentence-rewrite", label: "Parafrase Kalimat — Tulis ulang dengan gaya berbeda" },
+  { value: "sentence-continue", label: "Lanjutkan Kalimat — AI melanjutkan tulisan Anda" },
+  { value: "sentence-expand", label: "Kembangkan Kalimat — Ubah kalimat pendek jadi paragraf" },
+  { value: "blog-outline", label: "Outline Blog — Buat kerangka artikel blog" },
+  { value: "content-summary", label: "Ringkasan Konten — Rangkum teks panjang" },
+  { value: "text-shorten", label: "Perpendek Teks — Singkat teks menjadi lebih ringkas" },
+  // Media Sosial
+  { value: "twitter-post", label: "Post Twitter/X — Buat post gaya Twitter" },
+  { value: "facebook-post", label: "Post Facebook — Buat post gaya Facebook" },
+  { value: "instagram-post", label: "Post Instagram — Buat caption Instagram" },
+  { value: "threads-post", label: "Post Threads — Buat post gaya Threads" },
+  { value: "tiktok-caption", label: "Caption TikTok — Buat caption untuk video TikTok" },
+  { value: "social-bio", label: "Bio Media Sosial — Buat bio profil menarik" },
+  { value: "comment-write", label: "Tulis Komentar — Buat komentar berkualitas" },
+  { value: "comment-reply", label: "Balas Komentar — Buat balasan komentar" },
+  // Marketing & SEO
+  { value: "seo-title", label: "Judul SEO — Buat judul yang SEO-friendly" },
+  { value: "seo-description", label: "Deskripsi SEO — Buat meta description optimal" },
+  { value: "long-tail-keyword", label: "Long-tail Keyword — Generate keyword turunan" },
+  { value: "video-title", label: "Judul Video — Buat judul video YouTube/TikTok" },
+  { value: "video-description", label: "Deskripsi Video — Buat deskripsi video" },
+  { value: "video-script", label: "Script Video — Buat outline script video" },
+  // Kerja & Produktivitas
+  { value: "email-write", label: "Tulis Email — Buat email profesional" },
+  { value: "email-reply", label: "Balas Email — Buat balasan email" },
+  { value: "daily-report", label: "Laporan Harian — Buat laporan kerja harian" },
+  { value: "weekly-report", label: "Laporan Mingguan — Buat laporan kerja mingguan" },
+  { value: "monthly-report", label: "Laporan Bulanan — Buat laporan kerja bulanan" },
+  { value: "meeting-summary", label: "Ringkasan Rapat — Rangkum poin-poin rapat" },
+  { value: "task-breakdown", label: "Breakdown Tugas — Pecah tugas jadi langkah-langkah" },
+  { value: "quick-response", label: "Respons Cepat — Jawab pertanyaan singkat" },
+  { value: "about-us", label: "Halaman Tentang Kami — Buat konten About Us" },
+  // Pendidikan & Karir
+  { value: "expert-explain", label: "Penjelasan Ahli — Jelaskan topik secara bertahap" },
+  { value: "qa-generation", label: "Generator Q&A — Buat pasangan tanya-jawab" },
+  { value: "personal-intro", label: "Perkenalan Diri — Buat intro untuk interview" },
+  { value: "interview-qa", label: "Q&A Interview — Buat pertanyaan & jawaban wawancara" },
+  { value: "career-plan", label: "Rencana Karir — Buat rencana pengembangan karir" },
+  // Gaya Hidup
+  { value: "fitness-plan", label: "Program Fitness — Buat jadwal olahraga mingguan" },
+  { value: "meal-plan", label: "Rencana Makan — Buat menu makan mingguan" },
+  { value: "dinner-plan", label: "Rencana Makan Malam — Buat ide makan malam" },
+  { value: "game-name", label: "Nama Karakter Game — Buat nickname keren" },
+  // Utilitas
+  { value: "tone-analysis", label: "Analisis Tone — Analisis nada/gaya tulisan" },
+  { value: "text-to-table", label: "Teks ke Tabel — Konversi teks jadi tabel/CSV" },
+];
+
+const TONE_OPTIONS = [
+  { value: "profesional", label: "Profesional" },
+  { value: "santai", label: "Santai & Friendly" },
+  { value: "formal", label: "Formal" },
+  { value: "humoris", label: "Humoris" },
+  { value: "persuasif", label: "Persuasif" },
+  { value: "inspiratif", label: "Inspiratif" },
+  { value: "informatif", label: "Informatif" },
+  { value: "emosional", label: "Emosional" },
+];
+
+export const COPYWRITING_TOOL: Tool = {
+  id: "copywriting-assistant",
+  name: "AI Copywriting Assistant",
+  tagline: "Asisten penulisan AI — buat konten berkualitas untuk berbagai kebutuhan",
+  icon: "✒️",
+  pillar: "optimize",
+  isActive: true,
+  uiVariant: "simple",
+  outputType: "markdown",
+  estimatedTokens: { input: 500, output: 1500 },
+  estimatedDurationSeconds: 15,
+  inputs: [
+    {
+      id: "task",
+      label: "Jenis tugas",
+      type: "select",
+      required: true,
+      options: TASK_OPTIONS,
+      defaultValue: "article-title",
+      helpText: "Pilih jenis konten yang ingin dibuat.",
+    },
+    {
+      id: "content",
+      label: "Konten / instruksi",
+      type: "textarea",
+      placeholder: "Masukkan teks, topik, atau instruksi Anda di sini...\n\nContoh: Artikel tentang tips produktivitas untuk freelancer pemula di Indonesia",
+      required: true,
+      validation: { minLength: 5, maxLength: 5000 },
+      helpText: "Input utama — tergantung jenis tugas (teks untuk dicheck/rewrite, topik untuk generate, dll.)",
+    },
+    {
+      id: "tone",
+      label: "Tone / gaya penulisan",
+      type: "select",
+      required: false,
+      options: TONE_OPTIONS,
+      defaultValue: "profesional",
+      helpText: "Pilih nada penulisan yang diinginkan (opsional).",
+    },
+    {
+      id: "keywords",
+      label: "Kata kunci (opsional)",
+      type: "text",
+      placeholder: "produktivitas, freelancer, work-life balance",
+      required: false,
+      validation: { maxLength: 500 },
+      helpText: "Tambahkan kata kunci yang relevan, pisahkan dengan koma.",
+    },
+  ],
+};
