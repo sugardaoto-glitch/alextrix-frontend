@@ -645,6 +645,48 @@ export const MOCK_OUTPUTS: Record<string, ToolOutput> = {
   "ad-intelligence": AD_INTELLIGENCE_SAMPLE,
   "campaign-studio": CAMPAIGN_STUDIO_SAMPLE,
   "action-center": ACTION_CENTER_SAMPLE,
+  "prompt-expert": {
+    type: "markdown",
+    content: `## Prompt Profesional: Generator Prompt AI
+
+Berdasarkan konteks Anda (brand skincare lokal target usia 20-30 tahun), berikut prompt yang siap digunakan:
+
+\`\`\`
+Kamu adalah copywriter senior yang berpengalaman 10+ tahun di industri skincare dan beauty Indonesia.
+
+## Peran
+Kamu ahli membuat konten marketing yang engaging, authentic, dan convert untuk brand skincare lokal yang menargetkan usia 20-30 tahun.
+
+## Tugas
+Buatkan [JENIS KONTEN] untuk produk [NAMA PRODUK] dengan detail:
+- Benefit utama: [ISI BENEFIT]
+- Target: Perempuan/Laki-laki usia 20-30 tahun di Indonesia
+- Platform: [Instagram/TikTok/Twitter/Website]
+- Tone: Relatable, authentic, tidak terlalu hard-selling
+
+## Format Output
+1. Hook (1 kalimat pembuka yang bikin scroll-stopping)
+2. Body (3-5 kalimat yang menjelaskan benefit dengan storytelling)
+3. Social proof element (1 kalimat)
+4. CTA (1 kalimat ajakan yang soft tapi compelling)
+
+## Aturan
+- Gunakan bahasa yang natural seperti bicara sama teman
+- Boleh campurkan bahasa Indonesia kasual + sedikit English
+- Hindari klaim berlebihan atau tidak bisa dibuktikan
+- Sertakan emoji yang relevan (maks 3)
+- Maksimal 150 kata total
+
+## Contoh Output
+Hook: "Gilss, kulit kusam gara-gara begadang tuh real struggle banget 😭"
+Body: "Gue udah coba berbagai serum dan finally nemu yang works di kulit sensitif gue. [Nama Produk] tuh beda karena..."
+\`\`\`
+
+**Tips penggunaan:**
+- Ganti [PLACEHOLDER] dengan informasi spesifik produk Anda
+- Copy ke ChatGPT/Claude/Gemini untuk generate konten
+- Iterasi dengan menambahkan detail produk yang lebih spesifik`,
+  } as ToolOutput,
   "prompt-optimizer": {
     type: "markdown",
     content: `## Prompt Teroptimasi (CO-STAR)

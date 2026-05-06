@@ -13,6 +13,7 @@ const FRAMEWORK_OPTIONS = [
   { value: "claude-style", label: "Claude Style — Instruksi detail dengan contoh" },
   { value: "microsoft", label: "Microsoft — Optimasi prompt lanjutan" },
   { value: "draw", label: "DRAW — Optimasi prompt untuk AI image generation" },
+  { value: "complete-guide", label: "Complete Guide — Panduan lengkap optimasi bertahap" },
 ];
 
 export const PROMPT_OPTIMIZER_TOOL: Tool = {
