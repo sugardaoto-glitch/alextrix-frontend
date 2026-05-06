@@ -645,6 +645,20 @@ export const MOCK_OUTPUTS: Record<string, ToolOutput> = {
   "ad-intelligence": AD_INTELLIGENCE_SAMPLE,
   "campaign-studio": CAMPAIGN_STUDIO_SAMPLE,
   "action-center": ACTION_CENTER_SAMPLE,
+  "copywriting-assistant": {
+    type: "markdown",
+    content: `## Judul Artikel yang Dihasilkan
+
+Berdasarkan konten tentang "tips produktivitas untuk freelancer pemula di Indonesia":
+
+1. 7 Kebiasaan Pagi yang Bikin Freelancer Pemula Makin Produktif
+2. Rahasia Produktivitas Freelancer Sukses yang Jarang Dibagikan
+3. Dari Rebahan ke Revenue: Panduan Produktivitas untuk Freelancer Indonesia
+4. Stop Prokrastinasi! Ini Cara Jitu Atur Waktu sebagai Freelancer Pemula
+5. Work Smarter, Bukan Harder: Tips Produktivitas Khusus Freelancer Lokal
+
+**Tips:** Pilih judul yang paling sesuai dengan tone konten Anda, lalu gunakan sebagai headline artikel. Judul yang baik mengandung angka, power word, dan relevansi dengan target pembaca.`,
+  } as ToolOutput,
   "code-generator": {
     type: "markdown",
     content: `## Kode Generated: Landing Page Skincare
