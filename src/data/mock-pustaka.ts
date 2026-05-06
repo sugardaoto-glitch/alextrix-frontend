@@ -1,0 +1,68 @@
+import type { PustakaItem } from "@/lib/types/tool";
+
+export const MOCK_PUSTAKA: PustakaItem[] = [
+  {
+    id: "pust-1",
+    type: "page-html",
+    title: "LP Course MPASI Batch Cooking — v2",
+    content: { html: "<div>...</div>", warnings: [] },
+    tags: ["mpasi", "course", "lp"],
+    createdAt: "2026-04-28T10:00:00Z",
+  },
+  {
+    id: "pust-2",
+    type: "persona",
+    title: "Persona Bu Sarah — primary",
+    content: { name: "Bu Sarah", age: "28-32", location: "Jakarta Selatan" },
+    tags: ["mpasi", "persona", "primary"],
+    createdAt: "2026-04-25T14:30:00Z",
+  },
+  {
+    id: "pust-3",
+    type: "caption",
+    title: "Caption IG: Bu Sarah testimoni",
+    content: "📍 Cerita dari Bu Sarah, Jakarta...",
+    tags: ["instagram", "testimoni"],
+    createdAt: "2026-04-22T09:15:00Z",
+  },
+  {
+    id: "pust-4",
+    type: "email-sequence",
+    title: "Welcome Sequence 5 Email",
+    content: { emails: 5 },
+    tags: ["email", "welcome"],
+    createdAt: "2026-04-20T16:45:00Z",
+  },
+  {
+    id: "pust-5",
+    type: "block",
+    title: "Block: Hero Gradient Center",
+    content: { blockId: "hero-gradient-1" },
+    tags: ["hero", "block"],
+    createdAt: "2026-04-18T11:20:00Z",
+  },
+  {
+    id: "pust-6",
+    type: "prompt",
+    title: "Prompt LP Premium Course",
+    content: "# Prompt LP Premium...",
+    tags: ["lp", "prompt"],
+    createdAt: "2026-04-15T08:00:00Z",
+  },
+  {
+    id: "pust-7",
+    type: "campaign",
+    title: "Promo Akhir Bulan 7 Hari",
+    content: { duration: 7 },
+    tags: ["campaign", "promo"],
+    createdAt: "2026-04-12T13:00:00Z",
+  },
+  {
+    id: "pust-8",
+    type: "funnel",
+    title: "Funnel MPASI: Lead → Course",
+    content: { stages: 6 },
+    tags: ["funnel", "mpasi"],
+    createdAt: "2026-04-08T10:30:00Z",
+  },
+];
