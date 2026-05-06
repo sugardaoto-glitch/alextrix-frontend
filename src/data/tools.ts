@@ -1,5 +1,6 @@
 import type { Tool, ToolInputDef, WizardStep } from "@/lib/types/tool";
 import { ECOMMERCE_TOOLS } from "@/data/ecommerce-tools";
+import { PROMPT_OPTIMIZER_TOOL } from "@/data/prompt-optimizer-tool";
 
 const TONE_OPTIONS = [
   { value: "santai_jujur", label: "Santai & jujur" },
@@ -1166,7 +1167,7 @@ const BASE_TOOLS: Tool[] = [
   },
 ];
 
-export const TOOLS: Tool[] = [...BASE_TOOLS, ...ECOMMERCE_TOOLS];
+export const TOOLS: Tool[] = [...BASE_TOOLS, PROMPT_OPTIMIZER_TOOL, ...ECOMMERCE_TOOLS];
 
 export const TOOLS_BY_ID: Record<string, Tool> = Object.fromEntries(TOOLS.map((t) => [t.id, t]));
 

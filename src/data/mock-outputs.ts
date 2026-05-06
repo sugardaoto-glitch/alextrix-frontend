@@ -645,6 +645,48 @@ export const MOCK_OUTPUTS: Record<string, ToolOutput> = {
   "ad-intelligence": AD_INTELLIGENCE_SAMPLE,
   "campaign-studio": CAMPAIGN_STUDIO_SAMPLE,
   "action-center": ACTION_CENTER_SAMPLE,
+  "prompt-optimizer": {
+    type: "markdown",
+    content: `## Prompt Teroptimasi (CO-STAR)
+
+\`\`\`
+##Konteks##
+Anda perlu membuat konten marketing untuk produk skincare baru yang ditargetkan ke perempuan usia 25-35 tahun di Indonesia. Produk ini adalah serum vitamin C dengan harga menengah-premium. Sub-tugas:
+1. Buat headline yang menarik perhatian
+2. Tulis body copy yang menjelaskan manfaat utama
+3. Sertakan social proof dan call-to-action
+4. Sesuaikan tone dengan target audiens
+
+##Tujuan##
+Meningkatkan awareness dan conversion rate produk serum vitamin C baru melalui konten marketing yang compelling dan relatable untuk target market.
+
+##Identitas##
+Sebagai senior copywriter yang berpengalaman 10 tahun di industri beauty & skincare Indonesia, dengan track record membuat kampanye viral untuk brand lokal.
+
+##Nada##
+Hangat, terpercaya, dan aspirasional — seperti kakak perempuan yang membagikan rahasia kecantikannya. Hindari bahasa yang terlalu teknis atau pushy.
+
+##Audiens##
+Perempuan Indonesia usia 25-35 tahun yang:
+- Peduli perawatan kulit tapi budget-conscious
+- Aktif di media sosial (Instagram, TikTok)
+- Sudah familiar dengan basic skincare routine
+- Mencari produk yang proven dan affordable
+
+##Hasil##
+Konten marketing dalam format:
+- 1 headline utama (max 10 kata)
+- 1 sub-headline (max 20 kata)
+- Body copy 150-200 kata
+- 3 bullet point manfaat utama
+- 1 CTA yang kuat
+- 3 variasi caption Instagram (masing-masing max 100 kata)
+
+Silakan berpikir langkah demi langkah, lalu selesaikan tugas.
+\`\`\`
+
+**Tips penggunaan:** Copy prompt di atas dan paste ke ChatGPT, Claude, atau AI assistant lainnya untuk mendapatkan hasil yang optimal.`,
+  } as ToolOutput,
 };
 
 export function getMockOutput(toolId: string): ToolOutput {
