@@ -1,4 +1,5 @@
 import type { ToolOutput } from "@/lib/types/output";
+import { LYNKID_MOCK_OUTPUTS } from "./lynkid-mock-outputs";
 
 const SAMPLE_LP_HTML = `<div style="font-family: system-ui, sans-serif; max-width: 600px; margin: 0 auto; padding: 0; color: #1e1b4b; line-height: 1.6;">
   <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 48px 24px; text-align: center; border-radius: 16px 16px 0 0;">
@@ -644,6 +645,7 @@ export const MOCK_OUTPUTS: Record<string, ToolOutput> = {
   "ad-intelligence": AD_INTELLIGENCE_SAMPLE,
   "campaign-studio": CAMPAIGN_STUDIO_SAMPLE,
   "action-center": ACTION_CENTER_SAMPLE,
+  ...LYNKID_MOCK_OUTPUTS,
 };
 
 export function getMockOutput(toolId: string): ToolOutput {
