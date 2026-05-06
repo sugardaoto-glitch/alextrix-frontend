@@ -645,6 +645,118 @@ export const MOCK_OUTPUTS: Record<string, ToolOutput> = {
   "ad-intelligence": AD_INTELLIGENCE_SAMPLE,
   "campaign-studio": CAMPAIGN_STUDIO_SAMPLE,
   "action-center": ACTION_CENTER_SAMPLE,
+  "code-generator": {
+    type: "markdown",
+    content: `## Kode Generated: Landing Page Skincare
+
+\`\`\`tsx
+import { useState } from "react"
+import { Star, ShoppingCart, ChevronRight, Sparkles } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+
+export default function SkincareLP() {
+  const [activeTestimonial, setActiveTestimonial] = useState(0)
+
+  const features = [
+    { icon: <Sparkles className="w-6 h-6 text-pink-500" />, title: "Bahan Alami", desc: "100% bahan natural tanpa paraben dan SLS" },
+    { icon: <Star className="w-6 h-6 text-pink-500" />, title: "Teruji Klinis", desc: "Teruji dermatologis aman untuk kulit sensitif" },
+    { icon: <ShoppingCart className="w-6 h-6 text-pink-500" />, title: "Gratis Ongkir", desc: "Free shipping seluruh Indonesia tanpa minimum" },
+  ]
+
+  const testimonials = [
+    { name: "Rina M.", text: "Setelah 2 minggu pemakaian, kulit saya terasa lebih cerah dan lembap!", rating: 5 },
+    { name: "Dian S.", text: "Produk terbaik yang pernah saya coba. Teksturnya ringan dan cepat menyerap.", rating: 5 },
+    { name: "Fitri A.", text: "Akhirnya nemu skincare yang cocok di kulit sensitif saya!", rating: 4 },
+  ]
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-pink-50 to-rose-100 py-20 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          <div className="flex-1 space-y-6">
+            <Badge className="bg-pink-100 text-pink-700">New Release ✨</Badge>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+              Rahasia Kulit Glowing Alami
+            </h1>
+            <p className="text-lg text-gray-600">
+              Serum vitamin C premium dengan formula ringan yang cocok untuk semua jenis kulit Indonesia.
+            </p>
+            <div className="flex gap-4">
+              <Button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full">
+                Beli Sekarang <ChevronRight className="ml-2 w-4 h-4" />
+              </Button>
+              <Button variant="outline" className="rounded-full px-8 py-3">
+                Lihat Detail
+              </Button>
+            </div>
+          </div>
+          <div className="flex-1">
+            <img src="https://placehold.co/500x500/FFF0F5/FF69B4?text=Serum+VitC" alt="Botol serum vitamin C dengan latar pink soft" className="rounded-2xl shadow-xl" />
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-16 px-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8">
+          {features.map((f, i) => (
+            <Card key={i} className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="space-y-4 pt-6">
+                <div className="mx-auto w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center">{f.icon}</div>
+                <h3 className="font-semibold text-lg">{f.title}</h3>
+                <p className="text-gray-500 text-sm">{f.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-pink-50 py-16 px-6">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h2 className="text-3xl font-bold">Kata Mereka</h2>
+          <Card className="p-8">
+            <CardContent className="space-y-4">
+              <div className="flex justify-center gap-1">
+                {Array.from({ length: testimonials[activeTestimonial].rating }).map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-600 italic">"{testimonials[activeTestimonial].text}"</p>
+              <p className="font-semibold">{testimonials[activeTestimonial].name}</p>
+            </CardContent>
+          </Card>
+          <div className="flex justify-center gap-2">
+            {testimonials.map((_, i) => (
+              <button key={i} onClick={() => setActiveTestimonial(i)} className={\`w-3 h-3 rounded-full \${i === activeTestimonial ? "bg-pink-500" : "bg-pink-200"}\`} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 px-6 text-center">
+        <div className="max-w-2xl mx-auto space-y-6">
+          <h2 className="text-3xl font-bold">Mulai Perjalanan Skincare Anda</h2>
+          <p className="text-gray-500">Dapatkan diskon 20% untuk pembelian pertama</p>
+          <Button className="bg-pink-500 hover:bg-pink-600 text-white px-12 py-4 rounded-full text-lg">
+            Dapatkan Sekarang
+          </Button>
+        </div>
+      </section>
+    </div>
+  )
+}
+\`\`\`
+
+**Cara menggunakan:**
+1. Copy kode di atas ke file React/Next.js project Anda
+2. Pastikan sudah install: \`tailwindcss\`, \`lucide-react\`, \`@/components/ui/*\` (shadcn/ui)
+3. Import sebagai component atau gunakan langsung sebagai page`,
+  } as ToolOutput,
   "prompt-expert": {
     type: "markdown",
     content: `## Prompt Profesional: Generator Prompt AI
