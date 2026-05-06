@@ -4,6 +4,7 @@ import { PROMPT_OPTIMIZER_TOOL } from "@/data/prompt-optimizer-tool";
 import { PROMPT_EXPERT_TOOL } from "@/data/prompt-expert-tool";
 import { CODE_GENERATOR_TOOL } from "@/data/code-generator-tool";
 import { COPYWRITING_TOOL } from "@/data/copywriting-tool";
+import { PDF_ASSISTANT_TOOL } from "@/data/pdf-assistant-tool";
 
 const TONE_OPTIONS = [
   { value: "santai_jujur", label: "Santai & jujur" },
@@ -1170,7 +1171,7 @@ const BASE_TOOLS: Tool[] = [
   },
 ];
 
-export const TOOLS: Tool[] = [...BASE_TOOLS, PROMPT_OPTIMIZER_TOOL, PROMPT_EXPERT_TOOL, CODE_GENERATOR_TOOL, COPYWRITING_TOOL, ...ECOMMERCE_TOOLS];
+export const TOOLS: Tool[] = [...BASE_TOOLS, PROMPT_OPTIMIZER_TOOL, PROMPT_EXPERT_TOOL, CODE_GENERATOR_TOOL, COPYWRITING_TOOL, PDF_ASSISTANT_TOOL, ...ECOMMERCE_TOOLS];
 
 export const TOOLS_BY_ID: Record<string, Tool> = Object.fromEntries(TOOLS.map((t) => [t.id, t]));
 

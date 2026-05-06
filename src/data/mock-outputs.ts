@@ -645,6 +645,30 @@ export const MOCK_OUTPUTS: Record<string, ToolOutput> = {
   "ad-intelligence": AD_INTELLIGENCE_SAMPLE,
   "campaign-studio": CAMPAIGN_STUDIO_SAMPLE,
   "action-center": ACTION_CENTER_SAMPLE,
+  "pdf-assistant": {
+    type: "markdown",
+    content: `## Ringkasan Dokumen
+
+### Ringkasan Eksekutif
+Dokumen ini membahas strategi pemasaran digital untuk UMKM di Indonesia tahun 2024, dengan fokus pada optimalisasi media sosial dan marketplace sebagai channel utama penjualan.
+
+### Poin-Poin Utama
+
+- **Pertumbuhan E-commerce:** Pasar e-commerce Indonesia diprediksi tumbuh 25% YoY, mencapai USD 82 miliar pada 2025
+- **Channel Dominan:** Shopee (35%), Tokopedia (28%), dan TikTok Shop (18%) menguasai 81% pasar
+- **Strategi Konten:** Video pendek (< 60 detik) menghasilkan engagement 3x lebih tinggi dibanding konten statis
+- **Budget Optimal:** Alokasi ideal: 40% paid ads, 30% content creation, 20% influencer, 10% tools/software
+- **Target ROI:** UMKM dengan budget Rp 5-10 juta/bulan bisa mencapai ROAS 4-6x
+
+### Rekomendasi
+1. Prioritaskan video content untuk TikTok dan Instagram Reels
+2. Manfaatkan fitur live shopping di Shopee dan TikTok
+3. Bangun database customer untuk retargeting
+4. Gunakan tools AI untuk efisiensi produksi konten
+
+### Kesimpulan
+UMKM Indonesia yang mengadopsi strategi digital terintegrasi (marketplace + social media + content marketing) berpotensi meningkatkan revenue 2-4x dalam 6-12 bulan dengan investasi yang terukur.`,
+  } as ToolOutput,
   "copywriting-assistant": {
     type: "markdown",
     content: `## Judul Artikel yang Dihasilkan
