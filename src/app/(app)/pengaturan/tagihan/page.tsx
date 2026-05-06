@@ -100,11 +100,11 @@ export default function TagihanPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Tentang Akses Lifetime</CardTitle>
+          <CardTitle className="text-base">Tentang Akses Selamanya</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 text-sm text-slate-600">
           <p>
-            Pembelian Anda termasuk akses semua 32 tool selamanya. Tidak ada
+            Pembelian Anda termasuk akses semua tool selamanya. Tidak ada
             biaya bulanan, tidak ada upgrade tier.
           </p>
           <p>

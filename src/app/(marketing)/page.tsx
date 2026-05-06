@@ -19,7 +19,7 @@ export default function LandingPage() {
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
               <span className="bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent">
-                32 Tool AI Marketing
+                {TOOLS.length} Tool AI Marketing
               </span>
               <br />
               dalam Bahasa Indonesia
@@ -145,8 +145,8 @@ export default function LandingPage() {
             Sekali bayar. Akses selamanya.
           </h2>
           <p className="mt-4 text-base text-slate-600">
-            Tidak ada biaya bulanan. Tidak ada upgrade tier. Anda dapat semua 32
-            tool plus update gratis 90 hari pertama.
+            Tidak ada biaya bulanan. Tidak ada upgrade tier. Anda dapat semua{" "}
+            {TOOLS.length} tool plus update gratis 90 hari pertama.
           </p>
 
           <div className="mt-10 inline-block w-full max-w-md rounded-2xl border-2 border-brand-200 bg-white p-8 text-left shadow-lg">
@@ -164,7 +164,7 @@ export default function LandingPage() {
             <p className="mb-6 text-sm text-slate-500">Akses selamanya</p>
             <ul className="mb-6 space-y-2.5 text-sm text-slate-700">
               {[
-                "32 tool AI marketing siap pakai",
+                `${TOOLS.length} tool AI marketing siap pakai`,
                 "BYOK (Bawa Kunci API Sendiri) — kontrol anggaran AI sendiri",
                 "Update gratis 90 hari pertama",
                 "Komunitas Telegram seller Indonesia",

@@ -10,14 +10,14 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: "what-is-alextrix",
     question: "Apa itu Alextrix?",
     answer:
-      "Alextrix adalah dashboard 32 tool AI marketing yang dibuat khusus untuk seller di Lynk.id Indonesia. Mulai dari mencari niche, bikin landing page, sampai email sequence — semua dalam Bahasa Indonesia.",
+      "Alextrix adalah dasbor 40+ tool AI marketing yang dibuat khusus untuk seller di Lynk.id Indonesia. Mulai dari mencari niche, bikin landing page, sampai email sequence — semua dalam Bahasa Indonesia.",
     category: "umum",
   },
   {
     id: "lifetime-deal",
-    question: "Apakah benar Lifetime Deal? Tidak ada biaya bulanan?",
+    question: "Apakah benar akses selamanya? Tidak ada biaya bulanan?",
     answer:
-      "Benar. Anda bayar sekali (Rp 49.000 untuk 100 buyer pertama, Rp 99.000 setelahnya) dan akses 32 tool selamanya. Update gratis selama 90 hari pertama dari aktivasi.",
+      "Benar. Anda bayar sekali (Rp 49.000 untuk 100 buyer pertama, Rp 99.000 setelahnya) dan akses semua tool selamanya. Update gratis selama 90 hari pertama dari aktivasi.",
     category: "harga",
   },
   {
@@ -43,9 +43,9 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     id: "tools-count",
-    question: "Apa saja 32 tool-nya?",
+    question: "Apa saja tool yang tersedia?",
     answer:
-      "Dibagi 4 pilar: Akuisisi (5 tool — niche, persona, kompetitor), Konversi (11 tool — landing page, copy, harga), Retensi (5 tool — email sequence, WA blast, loyalty), Optimasi (11 tool — audit, A/B test, AI coach). Lihat daftar lengkap di halaman dasbor.",
+      "Dibagi 4 pilar: Akuisisi, Konversi, Retensi, dan Optimasi. Termasuk 34 tool e-commerce copywriting, AI Code Generator, AI Copywriting Assistant, PDF AI Assistant, Prompt Optimizer, dan Prompt Expert. Lihat daftar lengkap di halaman dasbor.",
     category: "umum",
   },
   {

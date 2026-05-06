@@ -17,7 +17,7 @@ export function MarketingFooter() {
               </span>
             </Link>
             <p className="mt-3 max-w-xs text-sm text-slate-600">
-              32 tool AI marketing untuk seller di Lynk.id Indonesia. Sekali
+              40+ tool AI marketing untuk seller di Lynk.id Indonesia. Sekali
               bayar, akses selamanya.
             </p>
           </div>

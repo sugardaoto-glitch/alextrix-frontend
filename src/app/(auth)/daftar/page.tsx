@@ -59,7 +59,7 @@ export default function DaftarPage() {
       <CardHeader>
         <CardTitle>Buat akun Alextrix</CardTitle>
         <CardDescription>
-          Sekali bayar, akses 32 tool selamanya.
+          Sekali bayar, akses semua tool selamanya.
         </CardDescription>
       </CardHeader>
       <CardContent>

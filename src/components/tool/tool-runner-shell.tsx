@@ -59,7 +59,7 @@ export function ToolRunnerShell({ tool }: Props) {
   const handleRun = async () => {
     if (!hasByok && !byokWarned) {
       setByokWarned(true);
-      toast.warning("Anda belum atur API key. Output ini menggunakan demo.", {
+      toast.warning("Anda belum atur kunci API. Output ini menggunakan demo.", {
         action: {
           label: "Atur sekarang",
           onClick: () => router.push(ROUTES.pengaturanApiKey),

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/lib/constants/routes";
 import { PRICING } from "@/lib/constants/pricing";
 import { formatIDR } from "@/lib/utils/format-currency";
+import { TOOLS } from "@/data/tools";
 
 export const metadata = {
   title: "Harga",
@@ -12,7 +13,7 @@ export const metadata = {
 
 export default function PricingPage() {
   const features = [
-    "32 tool AI marketing",
+    `${TOOLS.length} tool AI marketing`,
     "Block Library 30+ HTML siap copy ke Lynk.id",
     "Output 100% Bahasa Indonesia",
     "BYOK: pakai kunci API Anda (OpenAI, Gemini, OpenRouter, NVIDIA NIM)",
@@ -118,7 +119,7 @@ export default function PricingPage() {
           </div>
           <div>
             <p className="font-medium text-slate-900">
-              Apakah saya perlu API key sendiri?
+              Apakah saya perlu kunci API sendiri?
             </p>
             <p className="mt-1 text-slate-600">
               Ya. Anda pakai BYOK (Bawa Kunci API Sendiri) — kontrol biaya & data

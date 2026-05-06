@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s · Alextrix",
   },
   description:
-    "32 tool AI marketing yang dirancang khusus untuk seller di Lynk.id. Bahasa Indonesia native. Sekali bayar, akses selamanya.",
+    "40+ tool AI marketing yang dirancang khusus untuk seller di Lynk.id. Bahasa Indonesia native. Sekali bayar, akses selamanya.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"),
 };
 

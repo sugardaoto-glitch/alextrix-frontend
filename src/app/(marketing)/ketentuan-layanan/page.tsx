@@ -9,17 +9,17 @@ export default function KetentuanPage() {
         <h1>Ketentuan Layanan</h1>
         <p className="text-sm text-slate-500">Berlaku sejak 1 Mei 2026</p>
 
-        <h2>1. Akses Lifetime</h2>
+        <h2>1. Akses Selamanya</h2>
         <p>
-          Pembelian Alextrix memberikan akses lifetime untuk 1 user. Update
-          besar gratis selama 90 hari pertama dari aktivasi.
+          Pembelian Alextrix memberikan akses selamanya untuk 1 pengguna.
+          Update besar gratis selama 90 hari pertama dari aktivasi.
         </p>
 
         <h2>2. Penggunaan</h2>
         <p>
           Anda boleh menggunakan output dari Alextrix untuk produk dan kampanye
           marketing pribadi. Output tidak boleh dijual sebagai produk siap pakai
-          tanpa modifikasi (misal: ebook generated AI dijual mentah).
+          tanpa modifikasi (misal: ebook hasil AI dijual mentah).
         </p>
 
         <h2>3. BYOK & Pertanggungjawaban Biaya AI</h2>
