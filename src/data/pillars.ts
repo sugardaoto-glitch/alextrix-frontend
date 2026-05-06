@@ -61,6 +61,18 @@ export const PILLARS: Record<Pillar, PillarConfig> = {
     borderClass: "border-amber-200",
     hexColor: "#d97706",
   },
+  ecommerce: {
+    id: "ecommerce",
+    emoji: "🛒",
+    label: "E-Commerce",
+    shortLabel: "E-Com",
+    description:
+      "Copywriting e-commerce: keyword, listing, deskripsi produk, iklan, email, dan lainnya.",
+    bgClass: "bg-rose-100",
+    textClass: "text-rose-900",
+    borderClass: "border-rose-200",
+    hexColor: "#e11d48",
+  },
 };
 
 export const PILLAR_LIST: PillarConfig[] = [
@@ -68,4 +80,5 @@ export const PILLAR_LIST: PillarConfig[] = [
   PILLARS.convert,
   PILLARS.retain,
   PILLARS.optimize,
+  PILLARS.ecommerce,
 ];

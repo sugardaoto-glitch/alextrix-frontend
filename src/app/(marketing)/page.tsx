@@ -73,11 +73,11 @@ export default function LandingPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              4 pillar marketing, 32 tool
+              {PILLAR_LIST.length} pillar marketing, {TOOLS.length} tool
             </h2>
             <p className="mt-4 text-base text-slate-600">
-              Dari menarik audience baru sampai retain buyer existing — kami
-              bantu di setiap tahap funnel Anda.
+              Dari menarik audience baru sampai retain buyer existing, plus
+              copywriting e-commerce lengkap — kami bantu di setiap tahap.
             </p>
           </div>
 

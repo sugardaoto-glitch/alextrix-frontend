@@ -1,4 +1,5 @@
 import type { Tool, ToolInputDef, WizardStep } from "@/lib/types/tool";
+import { ECOMMERCE_TOOLS } from "@/data/ecommerce-tools";
 
 const TONE_OPTIONS = [
   { value: "santai_jujur", label: "Santai & jujur" },
@@ -32,7 +33,7 @@ const PRODUCT_TYPE_OPTIONS = [
   { value: "lainnya", label: "Lainnya" },
 ];
 
-export const TOOLS: Tool[] = [
+const BASE_TOOLS: Tool[] = [
   // ========== ACQUIRE (5) ==========
   {
     id: "niche-scanner",
@@ -1164,6 +1165,8 @@ export const TOOLS: Tool[] = [
     inputs: [],
   },
 ];
+
+export const TOOLS: Tool[] = [...BASE_TOOLS, ...ECOMMERCE_TOOLS];
 
 export const TOOLS_BY_ID: Record<string, Tool> = Object.fromEntries(TOOLS.map((t) => [t.id, t]));
 

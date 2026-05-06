@@ -1,4 +1,5 @@
 import type { ToolOutput } from "@/lib/types/output";
+import { ECOM_MOCK_OUTPUTS } from "@/data/ecommerce-mock-outputs";
 
 const SAMPLE_LP_HTML = `<div style="font-family: system-ui, sans-serif; max-width: 600px; margin: 0 auto; padding: 0; color: #1e1b4b; line-height: 1.6;">
   <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 48px 24px; text-align: center; border-radius: 16px 16px 0 0;">
@@ -647,5 +648,5 @@ export const MOCK_OUTPUTS: Record<string, ToolOutput> = {
 };
 
 export function getMockOutput(toolId: string): ToolOutput {
-  return MOCK_OUTPUTS[toolId] ?? GENERIC_TIPS;
+  return MOCK_OUTPUTS[toolId] ?? ECOM_MOCK_OUTPUTS[toolId] ?? GENERIC_TIPS;
 }
