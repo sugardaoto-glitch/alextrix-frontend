@@ -70,7 +70,7 @@ export const useByokStore = create<ByokState>()(
       verifyKey: async (provider) => {
         const entry = get().keys[provider];
         if (!entry) {
-          return { status: "invalid", message: "Belum ada API key untuk provider ini." };
+          return { status: "invalid", message: "Belum ada kunci API untuk penyedia ini." };
         }
         const result = await verifyApiKey(provider, "***", entry.defaultModel);
         set((state) => ({
@@ -89,7 +89,7 @@ export const useByokStore = create<ByokState>()(
       setActiveProvider: (provider) => {
         const entry = get().keys[provider];
         if (!entry) {
-          throw new Error("Belum ada API key untuk provider ini. Tambah dulu.");
+          throw new Error("Belum ada kunci API untuk penyedia ini. Tambah dulu.");
         }
         set({ activeProvider: provider });
       },

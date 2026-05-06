@@ -22,44 +22,44 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     id: "byok-explained",
-    question: "Apa itu BYOK (Bring Your Own Key)?",
+    question: "Apa itu BYOK (Bawa Kunci API Sendiri)?",
     answer:
-      "Anda menggunakan API key dari provider AI pilihan Anda (OpenAI, Gemini, OpenRouter, NVIDIA NIM, atau OpenAI-compatible). Alextrix tidak menjual token — Anda kontrol biaya dan keamanan key Anda sendiri.",
+      "Anda menggunakan kunci API dari penyedia AI pilihan Anda (OpenAI, Gemini, OpenRouter, NVIDIA NIM, atau Kompatibel OpenAI). Alextrix tidak menjual token — Anda kontrol biaya dan keamanan kunci Anda sendiri.",
     category: "byok",
   },
   {
     id: "byok-cost",
     question: "Berapa biaya AI bulanan kira-kira?",
     answer:
-      "Tergantung pemakaian. Untuk pemakaian moderate (5-10 tool run per hari), Gemini free tier sudah cukup. Power user biasanya pakai $5-20/bulan di OpenRouter atau OpenAI.",
+      "Tergantung pemakaian. Untuk pemakaian sedang (5–10 tool dijalankan per hari), paket gratis Gemini sudah cukup. Pengguna aktif biasanya pakai $5–20/bulan di OpenRouter atau OpenAI.",
     category: "byok",
   },
   {
     id: "supported-providers",
-    question: "Provider AI apa saja yang didukung?",
+    question: "Penyedia AI apa saja yang didukung?",
     answer:
-      "5 provider: OpenAI (GPT-4o), Google Gemini, OpenRouter (akses Claude + 100+ model), NVIDIA NIM (free tier), dan OpenAI-Compatible (Groq, Together, DeepInfra).",
+      "5 penyedia: OpenAI (GPT-4o), Google Gemini, OpenRouter (akses Claude + 100+ model), NVIDIA NIM (paket gratis), dan Kompatibel OpenAI (Groq, Together, DeepInfra).",
     category: "byok",
   },
   {
     id: "tools-count",
     question: "Apa saja 32 tool-nya?",
     answer:
-      "Dibagi 4 pillar: Acquire (5 tool — niche, persona, kompetitor), Convert (11 tool — landing page, copy, pricing), Retain (5 tool — email sequence, WA blast, loyalty), Optimize (11 tool — audit, A/B test, AI coach). Lihat list lengkap di halaman dashboard.",
+      "Dibagi 4 pilar: Akuisisi (5 tool — niche, persona, kompetitor), Konversi (11 tool — landing page, copy, harga), Retensi (5 tool — email sequence, WA blast, loyalty), Optimasi (11 tool — audit, A/B test, AI coach). Lihat daftar lengkap di halaman dasbor.",
     category: "umum",
   },
   {
     id: "for-beginners",
     question: "Saya pemula, apakah cocok?",
     answer:
-      "Sangat cocok. AI Coach akan diagnosis bisnis Anda lewat 10 pertanyaan dan langsung kasih action plan. Tool seperti Niche Scanner dan Persona Builder dibuat untuk pemula tanpa background marketing.",
+      "Sangat cocok. AI Coach akan diagnosis bisnis Anda lewat 10 pertanyaan dan langsung kasih rencana aksi. Tool seperti Niche Scanner dan Persona Builder dibuat untuk pemula tanpa latar belakang marketing.",
     category: "umum",
   },
   {
     id: "for-advanced",
-    question: "Saya sudah experienced, apa nilai tambahnya?",
+    question: "Saya sudah berpengalaman, apa nilai tambahnya?",
     answer:
-      "Block Library 50+, A/B Test Lab, Sales Cockpit, dan Campaign Studio dibuat untuk seller yang sudah punya data dan ingin scale. Workflow Builder bantu Anda standardisasi proses.",
+      "Block Library 50+, A/B Test Lab, Sales Cockpit, dan Campaign Studio dibuat untuk seller yang sudah punya data dan ingin berkembang. Workflow Builder bantu Anda standarisasi proses.",
     category: "umum",
   },
   {
@@ -80,14 +80,14 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: "data-privacy",
     question: "Apakah data saya aman?",
     answer:
-      "Output Anda di-saved di Pustaka pribadi (per akun). API key Anda terenkripsi dan tidak pernah keluar dari server kami. Kami tidak training AI dengan data Anda.",
+      "Hasil Anda disimpan di Pustaka pribadi (per akun). Kunci API Anda terenkripsi dan tidak pernah keluar dari server kami. Kami tidak melatih AI dengan data Anda.",
     category: "teknis",
   },
   {
     id: "refund",
     question: "Bisa refund?",
     answer:
-      "Karena ini lifetime access dengan harga sangat terjangkau, kami tidak menyediakan refund standard. Tapi jika ada masalah teknis serius, hubungi kami via Telegram dan kami akan bantu.",
+      "Karena ini akses selamanya dengan harga sangat terjangkau, kami tidak menyediakan pengembalian dana standar. Tapi jika ada masalah teknis serius, hubungi kami via Telegram dan kami akan bantu.",
     category: "support",
   },
   {
@@ -108,7 +108,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: "offline-use",
     question: "Bisa dipakai offline?",
     answer:
-      "Tidak. Tool butuh koneksi ke API provider AI Anda. Tapi Pustaka (output yang disimpan) bisa diakses offline berkat localStorage.",
+      "Tidak. Tool butuh koneksi ke penyedia AI Anda. Tapi Pustaka (hasil yang disimpan) bisa diakses offline berkat penyimpanan lokal.",
     category: "teknis",
   },
   {

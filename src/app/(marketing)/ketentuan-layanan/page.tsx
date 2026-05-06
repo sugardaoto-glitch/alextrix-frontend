@@ -24,8 +24,8 @@ export default function KetentuanPage() {
 
         <h2>3. BYOK & Pertanggungjawaban Biaya AI</h2>
         <p>
-          Alextrix tidak menyediakan token AI. Anda menggunakan API key Anda
-          sendiri di provider seperti OpenAI, Gemini, OpenRouter, NVIDIA NIM.
+          Alextrix tidak menyediakan token AI. Anda menggunakan kunci API Anda
+          sendiri di penyedia seperti OpenAI, Gemini, OpenRouter, NVIDIA NIM.
           Biaya pemakaian token sepenuhnya tanggung jawab Anda.
         </p>
 

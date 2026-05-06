@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Alextrix — AI Marketing Dashboard untuk Lynk.id",
+    default: "Alextrix — Dasbor AI Marketing untuk Lynk.id",
     template: "%s · Alextrix",
   },
   description:

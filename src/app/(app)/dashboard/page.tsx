@@ -96,7 +96,7 @@ export default function DashboardPage() {
                   }}
                   className="font-medium text-brand-600 hover:underline"
                 >
-                  Reset filter
+                  Atur ulang filter
                 </button>
               </p>
             </div>

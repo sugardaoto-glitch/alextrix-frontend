@@ -44,7 +44,7 @@ export function MarketingFooter() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold text-slate-900">Legal</h3>
+            <h3 className="mb-3 text-sm font-semibold text-slate-900">Hukum</h3>
             <ul className="space-y-2 text-sm text-slate-600">
               <li>
                 <Link href={ROUTES.privasi} className="hover:text-slate-900">

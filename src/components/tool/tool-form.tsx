@@ -38,7 +38,7 @@ export function ToolForm({
   onCancel,
   isStreaming = false,
   visibleFields,
-  submitLabel = "Generate",
+  submitLabel = "Hasilkan",
 }: ToolFormProps) {
   const [errors, setErrors] = useState<Record<string, string>>({});
 

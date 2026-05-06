@@ -15,7 +15,7 @@ interface CopyButtonProps {
 
 export function CopyButton({
   value,
-  label = "Copy",
+  label = "Salin",
   successMessage = "Tersalin ke clipboard",
   size = "sm",
   variant = "outline",

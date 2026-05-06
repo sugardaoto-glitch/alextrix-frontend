@@ -43,9 +43,9 @@ export default function ApiKeyPage() {
   return (
     <div className="mx-auto max-w-3xl space-y-4">
       <div className="rounded-lg border border-sky-200 bg-sky-50 p-4 text-sm text-sky-900">
-        <strong>BYOK (Bring Your Own Key)</strong>: Alextrix menggunakan API key
+        <strong>BYOK (Bawa Kunci API Sendiri)</strong>: Alextrix menggunakan kunci API
         Anda sendiri untuk akses model AI. Biaya pemakaian token = tanggung jawab
-        Anda. Key Anda tersimpan encrypted di akun Anda.
+        Anda. Kunci Anda tersimpan terenkripsi di akun Anda.
       </div>
 
       {hydrated &&
@@ -75,18 +75,18 @@ export default function ApiKeyPage() {
                           {entry.status === "verified"
                             ? "Terverifikasi"
                             : entry.status === "invalid"
-                              ? "Invalid"
+                              ? "Tidak Valid"
                               : "Belum diverifikasi"}
                         </Badge>
                       )}
                       {activeProvider === p.id && (
-                        <Badge className="text-[10px]">Active</Badge>
+                        <Badge className="text-[10px]">Aktif</Badge>
                       )}
                     </div>
                     {entry ? (
                       <div className="mt-1 text-xs text-slate-500">
-                        Key: <code className="font-mono">{entry.keyMasked}</code> ·
-                        Model default: <code>{entry.defaultModel}</code>
+                        Kunci: <code className="font-mono">{entry.keyMasked}</code> ·
+                        Model bawaan: <code>{entry.defaultModel}</code>
                       </div>
                     ) : (
                       <p className="mt-1 text-xs text-slate-500">{p.helpText}</p>
@@ -101,7 +101,7 @@ export default function ApiKeyPage() {
                       onClick={() => setOpenProvider(p.id)}
                     >
                       <Plus className="h-3.5 w-3.5" />
-                      Tambah Key
+                      Tambah Kunci
                     </Button>
                   ) : (
                     <>
@@ -120,7 +120,7 @@ export default function ApiKeyPage() {
                             }
                           }}
                         >
-                          Set aktif
+                          Jadikan aktif
                         </Button>
                       )}
                       <Button
@@ -173,14 +173,14 @@ export default function ApiKeyPage() {
       <ConfirmDialog
         open={!!confirmDelete}
         onOpenChange={(o) => !o && setConfirmDelete(null)}
-        title="Hapus API key?"
-        description="Key akan dihapus dari akun Anda. Anda bisa tambahkan lagi nanti."
+        title="Hapus kunci API?"
+        description="Kunci akan dihapus dari akun Anda. Anda bisa tambahkan lagi nanti."
         variant="destructive"
-        confirmLabel="Hapus key"
+        confirmLabel="Hapus kunci"
         onConfirm={() => {
           if (confirmDelete) {
             deleteKey(confirmDelete);
-            toast.success("API key dihapus.");
+            toast.success("Kunci API dihapus.");
           }
           setConfirmDelete(null);
         }}
@@ -227,14 +227,14 @@ function AddKeyDialog({
           <>
             <DialogHeader>
               <DialogTitle>
-                {config.logoEmoji} Tambah API Key {config.name}
+                {config.logoEmoji} Tambah Kunci API {config.name}
               </DialogTitle>
               <DialogDescription>{config.helpText}</DialogDescription>
             </DialogHeader>
 
             <div className="space-y-3">
               <div className="space-y-1.5">
-                <Label htmlFor="rawKey">API Key</Label>
+                <Label htmlFor="rawKey">Kunci API</Label>
                 <Input
                   id="rawKey"
                   type="password"
@@ -246,7 +246,7 @@ function AddKeyDialog({
               </div>
 
               <div className="space-y-1.5">
-                <Label htmlFor="model">Model default</Label>
+                <Label htmlFor="model">Model bawaan</Label>
                 <Select value={model} onValueChange={setModel}>
                   <SelectTrigger id="model">
                     <SelectValue placeholder="Pilih model..." />
@@ -263,7 +263,7 @@ function AddKeyDialog({
 
               {config.needsEndpoint && (
                 <div className="space-y-1.5">
-                  <Label htmlFor="endpoint">Endpoint URL</Label>
+                  <Label htmlFor="endpoint">URL Endpoint</Label>
                   <Input
                     id="endpoint"
                     type="url"

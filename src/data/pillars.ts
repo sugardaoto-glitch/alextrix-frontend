@@ -16,8 +16,8 @@ export const PILLARS: Record<Pillar, PillarConfig> = {
   acquire: {
     id: "acquire",
     emoji: "🎯",
-    label: "Acquire",
-    shortLabel: "Acquire",
+    label: "Akuisisi",
+    shortLabel: "Akuisisi",
     description:
       "Temukan niche, bedah kompetitor, bangun audience persona untuk bisnis Anda.",
     bgClass: "bg-blue-100",
@@ -28,8 +28,8 @@ export const PILLARS: Record<Pillar, PillarConfig> = {
   convert: {
     id: "convert",
     emoji: "💰",
-    label: "Convert",
-    shortLabel: "Convert",
+    label: "Konversi",
+    shortLabel: "Konversi",
     description:
       "Bangun landing page, copy yang konversi, dan harga yang masuk akal.",
     bgClass: "bg-emerald-100",
@@ -40,8 +40,8 @@ export const PILLARS: Record<Pillar, PillarConfig> = {
   retain: {
     id: "retain",
     emoji: "🔄",
-    label: "Retain",
-    shortLabel: "Retain",
+    label: "Retensi",
+    shortLabel: "Retensi",
     description:
       "Email sequence, WhatsApp blast, program loyalty untuk buyer kembali.",
     bgClass: "bg-purple-100",
@@ -52,8 +52,8 @@ export const PILLARS: Record<Pillar, PillarConfig> = {
   optimize: {
     id: "optimize",
     emoji: "📊",
-    label: "Optimize",
-    shortLabel: "Optimize",
+    label: "Optimasi",
+    shortLabel: "Optimasi",
     description:
       "Audit halaman, A/B test, marketing calendar, AI Coach untuk pertumbuhan.",
     bgClass: "bg-amber-100",
