@@ -82,7 +82,7 @@ export function BlockLibraryShell() {
           className="mb-2 inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-700"
         >
           <ArrowLeft className="h-3 w-3" />
-          Kembali ke Dashboard
+          Kembali ke Dasbor
         </button>
         <div className="flex items-start gap-3">
           <div className="text-3xl">🧱</div>

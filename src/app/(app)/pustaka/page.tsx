@@ -118,7 +118,7 @@ export default function PustakaPage() {
             description="Setiap output yang Anda 'simpan' dari tool akan muncul di sini. Cobalah buat output dulu."
             action={
               <Button asChild>
-                <Link href={ROUTES.dashboard}>Buka Dashboard</Link>
+                <Link href={ROUTES.dashboard}>Buka Dasbor</Link>
               </Button>
             }
           />

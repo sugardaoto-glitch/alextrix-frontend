@@ -221,8 +221,8 @@ export default function OnboardingPage() {
                         { v: "find_niche", l: "Cari niche dulu", d: "Belum punya ide produk yang jelas." },
                         { v: "build_first_product", l: "Bangun produk pertama", d: "Sudah punya niche, mau bikin produk." },
                         { v: "increase_conversion", l: "Naikkan konversi LP", d: "Sudah ada traffic, mau lebih banyak yang beli." },
-                        { v: "retain_buyers", l: "Repeat order buyer existing", d: "Punya buyer, mau mereka beli lagi." },
-                        { v: "optimize", l: "Optimize all-around", d: "Audit & perbaiki yang sudah jalan." },
+                        { v: "retain_buyers", l: "Repeat order pembeli lama", d: "Punya pembeli, mau mereka beli lagi." },
+                        { v: "optimize", l: "Optimasi menyeluruh", d: "Audit & perbaiki yang sudah jalan." },
                       ].map((opt) => (
                         <label
                           key={opt.v}

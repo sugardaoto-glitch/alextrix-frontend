@@ -31,7 +31,7 @@ export const ROUTES = {
 } as const;
 
 export const APP_NAV_ITEMS: NavItem[] = [
-  { id: "dashboard", label: "Dashboard", href: "/dashboard", icon: "LayoutGrid" },
+  { id: "dashboard", label: "Dasbor", href: "/dashboard", icon: "LayoutGrid" },
   { id: "pustaka", label: "Pustaka", href: "/pustaka", icon: "BookmarkCheck" },
   { id: "riwayat", label: "Riwayat", href: "/riwayat", icon: "History" },
   { id: "komunitas", label: "Komunitas", href: "/komunitas", icon: "Users" },
@@ -39,17 +39,17 @@ export const APP_NAV_ITEMS: NavItem[] = [
 
 export const APP_NAV_SETTINGS: NavItem[] = [
   { id: "profil", label: "Profil", href: "/pengaturan", icon: "User" },
-  { id: "api-key", label: "API Key", href: "/pengaturan/api-key", icon: "Key" },
+  { id: "api-key", label: "Kunci API", href: "/pengaturan/api-key", icon: "Key" },
   { id: "tagihan", label: "Tagihan", href: "/pengaturan/tagihan", icon: "Receipt" },
   { id: "telegram", label: "Telegram", href: "/pengaturan/komunitas", icon: "MessageCircle" },
 ];
 
 export const PILLAR_FILTER_ITEMS = [
   { id: "all", label: "Semua tool", emoji: "✨" },
-  { id: "acquire", label: "Acquire", emoji: "🎯" },
-  { id: "convert", label: "Convert", emoji: "💰" },
-  { id: "retain", label: "Retain", emoji: "🔄" },
-  { id: "optimize", label: "Optimize", emoji: "📊" },
+  { id: "acquire", label: "Akuisisi", emoji: "🎯" },
+  { id: "convert", label: "Konversi", emoji: "💰" },
+  { id: "retain", label: "Retensi", emoji: "🔄" },
+  { id: "optimize", label: "Optimasi", emoji: "📊" },
 ] as const;
 
 export const PROTECTED_ROUTES = [

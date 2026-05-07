@@ -31,7 +31,7 @@ export const PROVIDERS: ProviderConfig[] = [
     needsEndpoint: false,
     signupUrl: "https://build.nvidia.com",
     helpText:
-      "Generate API key di build.nvidia.com. Free tier dengan limit harian.",
+      "Buat kunci API di build.nvidia.com. Tersedia paket gratis dengan limit harian.",
   },
   {
     id: "openrouter",
@@ -49,7 +49,7 @@ export const PROVIDERS: ProviderConfig[] = [
     needsEndpoint: false,
     signupUrl: "https://openrouter.ai/keys",
     helpText:
-      "Generate API key di openrouter.ai/keys. Pakai pay-as-you-go (any credit ≥ $1).",
+      "Buat kunci API di openrouter.ai/keys. Pakai bayar-sesuai-pakai (kredit minimal $1).",
   },
   {
     id: "gemini",
@@ -67,7 +67,7 @@ export const PROVIDERS: ProviderConfig[] = [
     needsEndpoint: false,
     signupUrl: "https://aistudio.google.com",
     helpText:
-      "Generate API key di aistudio.google.com → Get API key. Free tier sudah cukup untuk 80% tool.",
+      "Buat kunci API di aistudio.google.com → Dapatkan Kunci API. Paket gratis sudah cukup untuk 80% tool.",
   },
   {
     id: "openai",
@@ -81,12 +81,12 @@ export const PROVIDERS: ProviderConfig[] = [
     needsEndpoint: false,
     signupUrl: "https://platform.openai.com/api-keys",
     helpText:
-      "Generate API key di platform.openai.com → API Keys. Minimum tier-1 ($5 deposit).",
+      "Buat kunci API di platform.openai.com → API Keys. Minimum tier-1 (deposit $5).",
   },
   {
     id: "openai-compatible",
-    name: "OpenAI-Compatible",
-    shortName: "Compatible",
+    name: "Kompatibel OpenAI",
+    shortName: "Kompatibel",
     color: "#64748B",
     logoEmoji: "⚪",
     defaultModels: ["llama-3.1-70b-versatile", "mixtral-8x7b-32768"],
@@ -95,7 +95,7 @@ export const PROVIDERS: ProviderConfig[] = [
     needsEndpoint: true,
     signupUrl: "https://groq.com",
     helpText:
-      "Untuk Groq, Together, DeepInfra, dll. Anda butuh API key + endpoint URL dari provider tersebut.",
+      "Untuk Groq, Together, DeepInfra, dll. Anda butuh kunci API + URL endpoint dari penyedia tersebut.",
   },
 ];
 

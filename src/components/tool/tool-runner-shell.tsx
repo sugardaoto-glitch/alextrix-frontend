@@ -59,7 +59,7 @@ export function ToolRunnerShell({ tool }: Props) {
   const handleRun = async () => {
     if (!hasByok && !byokWarned) {
       setByokWarned(true);
-      toast.warning("Anda belum atur API key. Output ini menggunakan demo.", {
+      toast.warning("Anda belum atur kunci API. Output ini menggunakan demo.", {
         action: {
           label: "Atur sekarang",
           onClick: () => router.push(ROUTES.pengaturanApiKey),
@@ -76,7 +76,7 @@ export function ToolRunnerShell({ tool }: Props) {
 
   const handleCancel = () => {
     cancel();
-    toast.info("Generate dibatalkan.");
+    toast.info("Proses dibatalkan.");
   };
 
   const handleSaveToPustaka = () => {
@@ -119,7 +119,7 @@ export function ToolRunnerShell({ tool }: Props) {
           className="mb-2 inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-700"
         >
           <ArrowLeft className="h-3 w-3" />
-          Kembali ke Dashboard
+          Kembali ke Dasbor
         </button>
         <div className="flex flex-wrap items-start gap-3">
           <div className="text-3xl">{tool.icon}</div>
@@ -169,7 +169,7 @@ export function ToolRunnerShell({ tool }: Props) {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
                 <Sparkles className="h-4 w-4 text-brand-500" />
-                {isWizard ? wizardSteps[wizardStep - 1]?.title ?? "Input" : "Input"}
+                {isWizard ? wizardSteps[wizardStep - 1]?.title ?? "Masukan" : "Masukan"}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -188,7 +188,7 @@ export function ToolRunnerShell({ tool }: Props) {
                 isStreaming={isStreaming}
                 visibleFields={visibleFields}
                 submitLabel={
-                  isWizard && wizardStep < wizardSteps.length ? "Lanjut" : "Generate"
+                  isWizard && wizardStep < wizardSteps.length ? "Lanjut" : "Hasilkan"
                 }
               />
               {isWizard && wizardStep > 1 && !isStreaming && (
@@ -209,7 +209,7 @@ export function ToolRunnerShell({ tool }: Props) {
           <Card>
             <CardHeader>
               <div className="flex items-center justify-between">
-                <CardTitle className="text-base">Output</CardTitle>
+                <CardTitle className="text-base">Hasil</CardTitle>
                 {currentOutput && (
                   <div className="flex gap-2">
                     <CopyButton value={outputTextToCopy ?? ""} label="Salin" />
@@ -230,10 +230,10 @@ export function ToolRunnerShell({ tool }: Props) {
                 <div className="rounded-xl border-2 border-dashed border-slate-200 bg-slate-50 p-8 text-center">
                   <div className="mb-2 text-3xl">✨</div>
                   <p className="text-sm font-medium text-slate-700">
-                    Output akan muncul di sini
+                    Hasil akan muncul di sini
                   </p>
                   <p className="mt-1 text-xs text-slate-500">
-                    Isi form di sebelah kiri lalu klik Generate.
+                    Isi form di sebelah kiri lalu klik Hasilkan.
                   </p>
                 </div>
               )}

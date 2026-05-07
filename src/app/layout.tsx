@@ -17,11 +17,11 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Alextrix — AI Marketing Dashboard untuk Lynk.id",
+    default: "Alextrix — Dasbor AI Marketing untuk Lynk.id",
     template: "%s · Alextrix",
   },
   description:
-    "32 tool AI marketing yang dirancang khusus untuk seller di Lynk.id. Bahasa Indonesia native. Sekali bayar, akses selamanya.",
+    "40+ tool AI marketing yang dirancang khusus untuk seller di Lynk.id. Bahasa Indonesia native. Sekali bayar, akses selamanya.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"),
 };
 

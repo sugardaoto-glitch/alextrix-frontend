@@ -19,14 +19,14 @@ export default function LandingPage() {
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
               <span className="bg-gradient-to-r from-brand-600 to-accent-600 bg-clip-text text-transparent">
-                32 Tool AI Marketing
+                {TOOLS.length} Tool AI Marketing
               </span>
               <br />
               dalam Bahasa Indonesia
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-base text-slate-600 sm:text-lg">
               Dari mencari niche, bikin landing page, sampai email sequence —
-              semua dalam satu dashboard. Bayar sekali, akses{" "}
+              semua dalam satu dasbor. Bayar sekali, akses{" "}
               <strong>selamanya</strong>.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -41,7 +41,7 @@ export default function LandingPage() {
               </Button>
             </div>
             <p className="mt-4 text-xs text-slate-500">
-              ✓ Sekali bayar, akses lifetime ✓ Tanpa biaya bulanan ✓ Garansi 7
+              ✓ Sekali bayar, akses selamanya ✓ Tanpa biaya bulanan ✓ Garansi 7
               hari
             </p>
           </div>
@@ -57,7 +57,7 @@ export default function LandingPage() {
                 <Star key={i} className="h-4 w-4 fill-current" />
               ))}
               <span className="ml-2 text-sm font-medium text-slate-700">
-                4.9/5 dari 100+ early users
+                4.9/5 dari 100+ pengguna awal
               </span>
             </div>
             <div className="hidden h-6 w-px bg-slate-200 sm:block" />
@@ -73,10 +73,10 @@ export default function LandingPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              {PILLAR_LIST.length} pillar marketing, {TOOLS.length} tool
+              {PILLAR_LIST.length} pilar marketing, {TOOLS.length} tool
             </h2>
             <p className="mt-4 text-base text-slate-600">
-              Dari menarik audience baru sampai retain buyer existing, plus
+              Dari menarik audiens baru sampai mempertahankan pembeli lama, plus
               copywriting e-commerce lengkap — kami bantu di setiap tahap.
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function LandingPage() {
               8 tool unggulan
             </h2>
             <p className="mt-4 text-base text-slate-600">
-              Tool yang paling banyak dipakai seller untuk hit milestone
+              Tool yang paling banyak dipakai seller untuk capai target
               pertama.
             </p>
           </div>
@@ -145,8 +145,8 @@ export default function LandingPage() {
             Sekali bayar. Akses selamanya.
           </h2>
           <p className="mt-4 text-base text-slate-600">
-            Tidak ada biaya bulanan. Tidak ada upgrade tier. Anda dapat semua 32
-            tool plus update gratis 90 hari pertama.
+            Tidak ada biaya bulanan. Tidak ada upgrade tier. Anda dapat semua{" "}
+            {TOOLS.length} tool plus update gratis 90 hari pertama.
           </p>
 
           <div className="mt-10 inline-block w-full max-w-md rounded-2xl border-2 border-brand-200 bg-white p-8 text-left shadow-lg">
@@ -161,15 +161,15 @@ export default function LandingPage() {
                 Rp 99.000
               </span>
             </div>
-            <p className="mb-6 text-sm text-slate-500">Akses lifetime</p>
+            <p className="mb-6 text-sm text-slate-500">Akses selamanya</p>
             <ul className="mb-6 space-y-2.5 text-sm text-slate-700">
               {[
-                "32 tool AI marketing siap pakai",
-                "BYOK (Bring Your Own Key) — kontrol budget AI sendiri",
+                `${TOOLS.length} tool AI marketing siap pakai`,
+                "BYOK (Bawa Kunci API Sendiri) — kontrol anggaran AI sendiri",
                 "Update gratis 90 hari pertama",
                 "Komunitas Telegram seller Indonesia",
                 "100% Bahasa Indonesia, tanpa Inggris yang bikin pusing",
-                "Garansi 7 hari money-back",
+                "Garansi 7 hari uang kembali",
               ].map((b) => (
                 <li key={b} className="flex items-start gap-2">
                   <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-600" />
@@ -188,11 +188,11 @@ export default function LandingPage() {
       <section className="bg-gradient-to-br from-brand-600 to-accent-600 py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Siap untuk leveling up bisnis Anda?
+            Siap untuk tingkatkan bisnis Anda?
           </h2>
           <p className="mt-4 text-base text-brand-100">
-            Bergabung dengan 100+ seller yang sudah pakai Alextrix untuk hit
-            milestone bisnis pertama mereka.
+            Bergabung dengan 100+ seller yang sudah pakai Alextrix untuk capai
+            target bisnis pertama mereka.
           </p>
           <div className="mt-8">
             <Button asChild size="lg" variant="secondary">

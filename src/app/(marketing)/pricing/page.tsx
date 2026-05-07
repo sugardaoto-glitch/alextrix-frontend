@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/lib/constants/routes";
 import { PRICING } from "@/lib/constants/pricing";
 import { formatIDR } from "@/lib/utils/format-currency";
+import { TOOLS } from "@/data/tools";
 
 export const metadata = {
   title: "Harga",
@@ -12,16 +13,16 @@ export const metadata = {
 
 export default function PricingPage() {
   const features = [
-    "32 tool AI marketing",
+    `${TOOLS.length} tool AI marketing`,
     "Block Library 30+ HTML siap copy ke Lynk.id",
     "Output 100% Bahasa Indonesia",
-    "BYOK: pakai API key Anda (OpenAI, Gemini, OpenRouter, NVIDIA NIM)",
+    "BYOK: pakai kunci API Anda (OpenAI, Gemini, OpenRouter, NVIDIA NIM)",
     "Update gratis 90 hari pertama",
-    "Pustaka pribadi untuk save output",
-    "Riwayat semua tool runs",
+    "Pustaka pribadi untuk simpan hasil",
+    "Riwayat semua tool dijalankan",
     "Akses komunitas Telegram",
-    "Mobile-friendly (bisa pakai di HP)",
-    "Garansi 7 hari money-back",
+    "Ramah seluler (bisa pakai di HP)",
+    "Garansi 7 hari uang kembali",
   ];
 
   return (
@@ -42,7 +43,7 @@ export default function PricingPage() {
             <Zap className="h-3 w-3" />
             PROMO TERBATAS
           </div>
-          <h2 className="text-lg font-semibold text-slate-900">Early Bird</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Harga Perdana</h2>
           <p className="mt-1 text-xs text-slate-500">
             Untuk 100 buyer pertama
           </p>
@@ -78,7 +79,7 @@ export default function PricingPage() {
 
         {/* REGULAR TIER */}
         <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
-          <h2 className="text-lg font-semibold text-slate-900">Regular</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Reguler</h2>
           <p className="mt-1 text-xs text-slate-500">Setelah 100 buyer pertama</p>
 
           <div className="mt-4 flex items-baseline gap-2">
@@ -86,7 +87,7 @@ export default function PricingPage() {
               {formatIDR(PRICING.regularPriceIDR)}
             </span>
           </div>
-          <p className="mt-2 text-sm text-slate-500">Akses lifetime</p>
+          <p className="mt-2 text-sm text-slate-500">Akses selamanya</p>
 
           <ul className="mt-6 space-y-2.5 text-sm text-slate-700">
             {features.map((f) => (
@@ -98,7 +99,7 @@ export default function PricingPage() {
           </ul>
 
           <Button asChild size="lg" variant="outline" fullWidth className="mt-8">
-            <Link href={ROUTES.daftar}>Daftar Regular</Link>
+            <Link href={ROUTES.daftar}>Daftar Reguler</Link>
           </Button>
         </div>
       </div>
@@ -110,7 +111,7 @@ export default function PricingPage() {
         </h3>
         <div className="mt-4 space-y-4 text-sm text-slate-700">
           <div>
-            <p className="font-medium text-slate-900">Benar lifetime?</p>
+            <p className="font-medium text-slate-900">Benar selamanya?</p>
             <p className="mt-1 text-slate-600">
               Benar. Bayar sekali, akses selamanya. Update gratis 90 hari
               pertama.
@@ -118,17 +119,17 @@ export default function PricingPage() {
           </div>
           <div>
             <p className="font-medium text-slate-900">
-              Apakah saya perlu API key sendiri?
+              Apakah saya perlu kunci API sendiri?
             </p>
             <p className="mt-1 text-slate-600">
-              Ya. Anda pakai BYOK (Bring Your Own Key) — kontrol biaya & data
+              Ya. Anda pakai BYOK (Bawa Kunci API Sendiri) — kontrol biaya & data
               sendiri.
             </p>
           </div>
           <div>
             <p className="font-medium text-slate-900">Bisa refund?</p>
             <p className="mt-1 text-slate-600">
-              Ya, garansi 7 hari money-back. Hubungi kami dan kami akan refund
+              Ya, garansi 7 hari uang kembali. Hubungi kami dan kami akan kembalikan
               100%.
             </p>
           </div>

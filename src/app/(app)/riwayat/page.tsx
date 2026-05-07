@@ -104,7 +104,7 @@ export default function RiwayatPage() {
             description="Setiap kali Anda jalankan tool, run-nya akan muncul di sini."
             action={
               <Button asChild>
-                <Link href={ROUTES.dashboard}>Buka Dashboard</Link>
+                <Link href={ROUTES.dashboard}>Buka Dasbor</Link>
               </Button>
             }
           />
