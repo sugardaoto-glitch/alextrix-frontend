@@ -1,0 +1,82 @@
+/* Web Generator styles - scoped with wg- prefix */
+.wg-scanning::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 5px;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(19, 161, 14, 0.2),
+    rgba(19, 161, 14, 0.8)
+  );
+  animation: wg-scanning 3s ease-in-out infinite;
+}
+
+@keyframes wg-scanning {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(340px);
+  }
+}
+
+.wg-app-title {
+  font-size: 22px;
+  color: rgb(9, 9, 11);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .wg-app-css {
+    display: flex;
+    max-width: 80vw;
+    margin-top: 25px;
+    border: 0.8px solid rgb(222, 222, 222);
+    border-radius: 16px;
+    box-shadow:
+      rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+      rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+      rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+      rgba(0, 0, 0, 0.1) 0px 8px 10px -6px;
+  }
+  .wg-sider-css {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+  }
+  .wg-app-button {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .wg-d-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .wg-m-hidden {
+    display: none;
+  }
+  .wg-app-button {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .wg-code-css {
+    height: 1000px;
+    left: 0;
+    right: 0;
+  }
+  .wg-code-css > iframe {
+    margin-bottom: 10px;
+  }
+  .wg-app-code-css {
+    top: 37.5px;
+    width: 100%;
+  }
+  .wg-app-title {
+    font-size: 20px;
+  }
+}
